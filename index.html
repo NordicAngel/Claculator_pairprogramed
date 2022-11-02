@@ -8,9 +8,14 @@
 <body>
     <div id="app">
         <input v-model.number:="number1" type="number" placeholder="type a number">
-        +
+        <select v-model="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
         <input v-model.number:="number2" type="number" placeholder="type a number">
-        <input type="button" value="=">
+        <input type="button" value="=" @click="calculate">
         {{result}}
     </div>
 <script src="./index.js"></script>

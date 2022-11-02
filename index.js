@@ -3,9 +3,32 @@ const app = Vue.createApp({
         return {
             number1:"",
             number2:"",
-            result:0  
+            result:0, 
+            operation: "+" 
             }
         },
-        methods: {}
+        methods: {
+            calculate(){
+                switch(this.operation){
+                    case "+":
+                        this.result = this.number1 + this.number2
+                        break;
+                    case "-":
+                        this.result = this.number1 - this.number2
+                        break;
+                    case "*":
+                        this.result = this.number1 * this.number2
+                        break;
+                    case "/":
+                        this.result = this.number1 / this.number2
+                        break;
+                    default:
+                        alert("You fucked up!")
+
+                    
+                }
+
+            }
+        }
     },
 );
